@@ -1,0 +1,32 @@
+{
+  "name": "Base bot Case × Plugins by ArdSvt",
+  "version": "0.0.1",
+  "description": "Whatsapp bot base by ArdSvt",
+  "script": {
+    "start": "node index.js"
+  },
+  "author": {
+    "name": "ArdSvt",
+    "contact": "wa.me/6283861772386"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@ardsvt/baileys": "github:ardsvt/Baileyslib",
+    "awesome-phonenumber": "^6.12.0",
+    "axios": "^1.8.4",
+    "cheerio": "^1.0.0",
+    "child_process": "^1.0.2",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.5.0",
+    "file-type": "^16.5.4",
+    "form-data": "^4.0.2",
+    "fs": "0.0.1-security",
+    "mongodb": "^6.16.0",
+    "node-cache": "^5.1.2",
+    "node-fetch": "^2.7.0",
+    "pino": "^8.21.0",
+    "qrcode": "^1.5.4",
+    "syntax-error": "^1.4.0",
+    "yargs": "^17.7.2"
+  }
+}
