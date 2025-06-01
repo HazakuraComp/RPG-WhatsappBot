@@ -18,9 +18,9 @@ Bot ini dibangun menggunakan JavaScript dan MongoDB. Bot ini dapat dijalankan pa
 * [ArdSvt](https://github.com/ArdSvt)
 
 ## Teknologi yang Digunakan
-* <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" width="24" height="24"/> JavaScript
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="MongoDB" width="24" height="24"/> MongoDB
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="24" height="24"/> Node.js
+* <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+* <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
+* <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
 
 ## Catatan
 Pastikan Anda untuk mengisi URI MongoDB yang valid pada file config.js. Jika Anda memiliki masalah atau pertanyaan, jangan ragu untuk menghubungi creator.
