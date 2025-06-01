@@ -8,6 +8,8 @@ Base bot Case × Plugins by ArdSvt
 */
 
 global.creator = [ "6283861772386"]
+global.mongodb_uri = "URI NYA BISA SAYA BANTU BUATKAN CHAT SAJA KE NOMER WHATSAPP DIATAS"
+global.pairing_code = "ARDACRTR"
 
 let file = require.resolve(__filename)
 const fs = require("fs")
