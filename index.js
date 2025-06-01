@@ -15,7 +15,6 @@ const NodeCache = require("node-cache");
 const msgRetryCounterCache = new NodeCache();
 const fetch = require("node-fetch");
 const FileType = require('file-type');
-const dotenv = require("dotenv");
 const { Boom } = require("@hapi/boom");
 const PhoneNumber = require("awesome-phonenumber");
 const readline = require("readline");
@@ -23,12 +22,11 @@ const { smsg, color, getBuffer } = require("./lib/myfunc");
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif');
 const { toAudio, toPTT, toVideo } = require('./lib/converter');
 const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) });
-dotenv.config()
 const yargs = require('yargs/yargs');
 const opts = yargs(process.argv.slice(2)).exitProcess(false).parse();
-if (!process.env.MONGODB_URI.startsWith("mongo+srv://")) return console.log("MASUKAN URI MONGODB KAMU DI FILE .env")
+if (!global.mongodb_uri.startsWith("mongo+srv://")) return console.log("MASUKAN URI MONGODB KAMU DI FILE .env")
 const { MongoClient, ServerApiVersion } = require("mongodb")
-const client = new MongoClient(process.env.MOMGODB_URI, {
+const client = new MongoClient(global.mongodb_uri, {
 serverApi: {
 version: ServerApiVersion.v1,
 strict: true,
@@ -80,7 +78,7 @@ browser: ["Ubuntu", "Chrome", "20.0.04"],
 });
 if(usePairingCode && !ard.authState.creds.registered) {
 const phoneNumber = await question('Masukan nomor yang ingin dijadikan bot :\n');
-const code = await ard.requestPairingCode(phoneNumber.trim(), process.env.PAIRING_CODE)
+const code = await ard.requestPairingCode(phoneNumber.trim(), global.pairing_code)
 console.log(`Pairing code untuk ${phoneNumber} : ${code}`)
 }
 store.bind(ard.ev);
