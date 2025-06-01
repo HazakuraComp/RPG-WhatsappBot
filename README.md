@@ -7,7 +7,7 @@ Bot ini dibangun menggunakan JavaScript dan MongoDB. Bot ini dapat dijalankan pa
 
 1. Install Termux pada perangkat Android Anda.
 2. Jalankan perintah `pkg install nodejs` untuk menginstal Node.js.
-3. Clone repository ini menggunakan perintah git clone [https://github.com/ArdSvt/Base-Case-x-Plugins](https://github.com/ArdSvt/Base-Case-x-Plugins).
+3. Clone repository ini menggunakan perintah `git clone https://github.com/ArdSvt/Base-Case-x-Plugins`.
 4. Masuk ke direktori repository menggunakan perintah `cd Base-Case-x-Plugins`.
 5. Jalankan perintah `npm install` untuk menginstal dependensi.
 6. Jalankan perintah `npm start` untuk menjalankan bot.
