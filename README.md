@@ -12,10 +12,10 @@ Bot ini dibangun menggunakan JavaScript dan MongoDB. Bot ini dapat dijalankan pa
 5. Jalankan perintah `npm install` untuk menginstal dependensi.
 6. Jalankan perintah `npm start` untuk menjalankan bot.
 
-* Jika Anda tidak tahu cara membuat URI MongoDB, Anda dapat menghubungi wa.me/6283861772386](https://wa.me/6283861772386) untuk meminta bantuan.
+* Jika Anda tidak tahu cara membuat URI MongoDB, Anda dapat menghubungi [wa.me/6283861772386](https://wa.me/6283861772386) untuk meminta bantuan.
 
 ## Creator
-* [ArdSvt](https://github.com/ArdSvt).
+* [ArdSvt](https://github.com/ArdSvt)
 
 ## Teknologi yang Digunakan
 * JavaScript
