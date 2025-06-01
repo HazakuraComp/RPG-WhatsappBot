@@ -26,7 +26,7 @@ const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream
 dotenv.config()
 const yargs = require('yargs/yargs');
 const opts = yargs(process.argv.slice(2)).exitProcess(false).parse();
-if (!process.env.MONGODB_URI) return console.log("MASUKAN URI MONGODB KAMU DI FILE .env")
+if (!process.env.MONGODB_URI.startsWith("mongo+srv://")) return console.log("MASUKAN URI MONGODB KAMU DI FILE .env")
 const { MongoClient, ServerApiVersion } = require("mongodb")
 const client = new MongoClient(process.env.MOMGODB_URI, {
 serverApi: {
