@@ -41,9 +41,9 @@ const folderName = "tmp";
 const folderPath = path.join(__dirname, folderName);
 if (!fs.existsSync(folderPath)) {
 fs.mkdirSync(folderPath);
-lolcatjs.fromString(`Folder '${folderName}' berhasil dibuat.`);
+console.log(`Folder '${folderName}' berhasil dibuat.`);
 } else {
-lolcatjs.fromString(`Folder '${folderName}' sudah ada.`);
+console.log(`Folder '${folderName}' sudah ada.`);
 }
 }
 createTmpFolder();
@@ -58,7 +58,7 @@ rl.question(text, resolve)
 })
 };
 async function start() {
-const message
+let message
 async function runBot() {
 const { state, saveCreds } = await useMultiFileAuthState("session")
 const ard = makeWASocket({
