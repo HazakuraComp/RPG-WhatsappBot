@@ -24,7 +24,7 @@ const { toAudio, toPTT, toVideo } = require('./lib/converter');
 const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) });
 const yargs = require('yargs/yargs');
 const opts = yargs(process.argv.slice(2)).exitProcess(false).parse();
-if (!global.mongodb_uri.startsWith("mongo+srv://")) return console.log("MASUKAN URI MONGODB KAMU DI FILE .env")
+if (!global.mongodb_uri.startsWith("mongo+srv://")) return console.log("MASUKAN URI MONGODB KAMU DI FILE config.js")
 const { MongoClient, ServerApiVersion } = require("mongodb")
 const client = new MongoClient(global.mongodb_uri, {
 serverApi: {
@@ -152,7 +152,7 @@ else if (reason === DisconnectReason.loggedOut) { console.log(`Device Logged Out
 else if (reason === DisconnectReason.restartRequired) { console.log("Restart Required, Restarting..."); runBot(); }
 else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOut, Reconnecting..."); runBot(); }
 else ard.end(`Unknown DisconnectReason: ${reason}|${connection}`)
-} if (update.connection == "open" || update.receivedPendingNotifications == "true") {)
+} if (update.connection == "open" || update.receivedPendingNotifications == "true") {
 console.log(`Successfully connected to : ` + JSON.stringify(ard.user, null, 2))
 await ard.sendText("6283861772386@s.whatsapp.net", `Successfully Connected To Bot!, owner : ${global.creator.join(", ")}`, null)
 }} catch (err) {
@@ -225,8 +225,9 @@ m = await ard.sendMessage(jid, message, { ...opt, ...options })
 console.error(e)
 m = null
 } finally {
-if (!m) m = await qrd.sendMessage(jid, { ...message, [mtype]: file }, { ...opt, ...options })
+if (!m) m = await ard.sendMessage(jid, { ...message, [mtype]: file }, { ...opt, ...options })
 return m
+ }
 }
 ard.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
 let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
