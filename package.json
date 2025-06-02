@@ -24,7 +24,6 @@
     "fs": "0.0.1-security",
     "jimp": "^0.16.1",
     "lodash": "latest",
-    "lolcatjs": "^2.4.1",
     "mongodb": "^6.16.0",
     "node-cache": "^5.1.2",
     "node-fetch": "^2.7.0",
