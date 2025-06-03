@@ -46,7 +46,7 @@ const args = body?.trim().split(/ +/).slice(1);
 const full_args = body?.replace(command, '').slice(1).trim();
 const pushname = m?.pushName || "No Name";
 const botNumber = await ard.decodeJid(ard.user.id);
-const isCreator = global.creator.includes(m.sender) || false;
+const isCreator = global.creator.includes(m.sender.split("@")[0]) || false;
 const itsMe = (m && m?.sender && m?.sender == botNumber) || false;
 const text = q = args?.join(" ");
 const fatkuns = m && (m?.quoted || m);
