@@ -60,7 +60,7 @@ rl.question(text, resolve)
 async function start() {
 let message
 async function runBot() {
-const { state, saveCreds } = await useMultiFileAuthState("session")
+const { state, saveCreds } = await useMultiFileAuthState("sessions/parent")
 const ard = makeWASocket({
 logger: pino({ level: "silent" }),
 printQRInTerminal: !usePairingCode,
