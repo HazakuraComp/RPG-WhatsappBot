@@ -24,7 +24,7 @@ const { toAudio, toPTT, toVideo } = require('./lib/converter');
 const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) });
 const yargs = require('yargs/yargs');
 const opts = yargs(process.argv.slice(2)).exitProcess(false).parse();
-if (!global.mongodb_uri.startsWith("mongo+srv://")) return console.log("MASUKAN URI MONGODB KAMU DI FILE config.js")
+if (!global.mongodb_uri.startsWith("mongodb+srv://")) return console.log("MASUKAN URI MONGODB KAMU DI FILE config.js")
 const { MongoClient, ServerApiVersion } = require("mongodb")
 const client = new MongoClient(global.mongodb_uri, {
 serverApi: {
