@@ -134,7 +134,7 @@ m.reply(String(error));
 }
 }
 break
-case "ex": {
+case "exec": {
 if (!isCreator) return;
 exec(text, (err, stdout) => {
 if (err) return m?.reply("```Error :```\n\n" + `${err}`)
