@@ -280,7 +280,7 @@ buffer = await imageToWebp(buff)
 await ard.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
 return buffer
 }
-ard.sendText = (jid, text, quoted = '', options) => ptz.sendMessage(jid, { text: text, ...options }, { quoted })
+ard.sendText = (jid, text, quoted = '', options) => ard.sendMessage(jid, { text: text, ...options }, { quoted })
 global.mainbot = ard
 restoreSession(ard)
 return ard;
