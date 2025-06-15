@@ -10,7 +10,9 @@ Creator: [ArdSvt](https://github.com/ArdSvt)
 
 The following is a complete guide to using or deploying this bot..
 
-[Run With Termux](#RunTermux) - How to run in termux
+[Run With Termux](#RunTermux) - How to run in termux.
+[Get URI MongoDB](#UriGet) - How to Get uri Mongo database.
+
 ## RunTermux
 
 1. Install Termux to Yor android system.
@@ -22,6 +24,8 @@ The following is a complete guide to using or deploying this bot..
 
 If you can't use uri or are confused about how to get Mongo db uri you can click on this whatsapp link..
 [Whatsapp](https://wa.me/6287756593163)
+
+## UriGet
 
 ## Note
 
