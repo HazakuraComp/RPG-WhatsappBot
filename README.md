@@ -6,7 +6,10 @@ Introducing the WhatsApp RPG bot that supports the Mongo database and can use ca
 
 Creator: [ArdSvt](https://github.com/ArdSvt)
 
-## How To Run Code in Termux
+## Table of Contents 
+
+[Run With Termux](#RunTermux)
+## RunTermux
 
 1. Install Termux to Yor android system.
 2. run command `pkg install nodejs` for install the Node.js package.
