@@ -50,7 +50,7 @@ If you can't use uri or are confused about how to get Mongo db uri you can click
      mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?retryWrites=true&w=majority
      ```
 
-6. **Paste into `.env` File**
+6. **Paste into `config` File**
    ```env
    MONGO_URI=mongodb+srv://your_user:your_pass@cluster.mongodb.net/?retryWrites=true&w=majority
 
