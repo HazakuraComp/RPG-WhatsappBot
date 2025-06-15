@@ -19,4 +19,9 @@ If you can't use uri or are confused about how to get Mongo db uri you can click
 [Whatsapp](https://wa.me/6287756593163)
 
 ## Note
+
+```javascript
+
+const java =
+```
 Make sure you fill in a valid MongoDB URI in the config.js file. If you have any issues or questions, feel free to contact the creator.
