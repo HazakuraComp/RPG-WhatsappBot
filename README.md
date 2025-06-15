@@ -11,7 +11,7 @@ Creator: [ArdSvt](https://github.com/ArdSvt)
 1. Install Termux to Yor android system.
 2. run command `pkg install nodejs` for install the Node.js package.
 3. Clone this repository use command `git clone https://github.com/HazakuraComp/Rpg-WhatsappBot`.
-4. enter the repository directory using the command `cd Base-Case-x-Plugins`.
+4. enter the repository directory using the command `cd RPG-WhatsappBot`.
 5. run command `npm install` for installing Dependencies.
 6. and run command `npm start` for start the bots.
 
