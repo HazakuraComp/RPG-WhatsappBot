@@ -11,7 +11,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@ardsvt/baileys": "github:ardsvt/Baileyslib",
+    "@ardsvt/baileys": "github:HazakuraComp/Baileys",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "awesome-phonenumber": "^6.12.0",
     "axios": "^1.8.4",
