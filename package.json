@@ -1,13 +1,13 @@
 {
-  "name": "Base bot Case × Plugins by ArdSvt",
+  "name": "rpg-botwhatsapp",
   "version": "0.0.1",
-  "description": "Whatsapp bot base by ArdSvt",
+  "description": "Whatsapp Bot RPG base by HazakuraComp",
   "scripts": {
     "start": "node index.js"
   },
   "author": {
-    "name": "ArdSvt",
-    "contact": "wa.me/6283861772386"
+    "name": "Renata",
+    "contact": "wa.me/6287756593163"
   },
   "license": "MIT",
   "dependencies": {
