@@ -13,6 +13,24 @@ The following is a complete guide to using or deploying this bot..
 [Run With Termux](#RunTermux) - How to run in termux.
 [Get URI MongoDB](#UriGet) - How to Get uri Mongo database.
 
+## 📦 WhatsApp Bot Dependencies
+
+| Package              | Version    | Description                                                          |
+|----------------------|------------|----------------------------------------------------------------------|
+| `baileys`            | ^6.x.x     | WhatsApp Web API for multi-device support                            |
+| `mongodb`            | ^5.x.x     | MongoDB client for database interaction                              |
+| `node-fetch`         | ^3.x.x     | HTTP client (used for API requests like Jikan API, YouTube API)      |
+| `chalk`              | ^5.x.x     | Adds terminal color logs                                             |
+| `moment`             | ^2.x.x     | Time/date formatting (e.g., cooldowns, daily timestamps)             |
+| `pino`               | ^8.x.x     | Lightweight logger                                                   |
+| `express`            | ^4.x.x     | (Optional) Web server or keep-alive endpoint                         |
+| `dotenv`             | ^16.x.x    | Load environment variables                                           |
+| `axios`              | ^1.x.x     | Promise-based HTTP client (alternative to fetch)                     |
+| `cheerio`            | ^1.x.x     | HTML parser and scraper (like jQuery)                                |
+| `qrcode-terminal`    | ^0.12.x    | Prints QR codes in terminal (used in QR login session)               |
+| `form-data`          | ^4.x.x     | Used to send files in HTTP requests (e.g., media uploads)            |
+| `fs-extra`           | ^11.x.x    | File system utilities (e.g., `fs.ensureDir`, `fs.writeJson`, etc.)   |
+
 ## RunTermux
 
 1. Install Termux to Yor android system.
