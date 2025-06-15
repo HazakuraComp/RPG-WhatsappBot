@@ -1,6 +1,6 @@
-# Base Case × Plugins
+# Rpg Whatsapp Bot
 
-Bot ini dibangun menggunakan JavaScript dan MongoDB. Bot ini dapat dijalankan pada Termux dan panel menggunakan npm.
+Introducing the WhatsApp RPG bot that supports the Mongo database and can use cases and plugins simultaneously. This is a homemade version by HazakuraComp and the original you can just visit this link https://github.com/ArdSvt/Base-Case-x-Plugins/
 
 ## Cara Menjalankan Bot
 ### Menggunakan Termux
