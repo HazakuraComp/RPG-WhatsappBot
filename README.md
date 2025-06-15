@@ -27,6 +27,33 @@ If you can't use uri or are confused about how to get Mongo db uri you can click
 
 ## UriGet
 
+🔗 Steps to Get URI from MongoDB Atlas
+
+1. **Sign Up / Log In**
+   - Visit [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)
+
+2. **Create a Cluster**
+   - Click “Build a Database” → Choose “Shared” → Select region → Create
+
+3. **Add a Database User**
+   - Go to **Database Access** → Add new user
+   - Set a username & password
+   - Choose role: `Read and write to any database`
+
+4. **Allow Network Access**
+   - Go to **Network Access** → Add IP Address → Select `0.0.0.0/0` (Allow from anywhere)
+
+5. **Get Connection URI**
+   - Go to **Database** → Click “Connect” → Choose “Connect your application”
+   - Copy the URI:
+     ```
+     mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?retryWrites=true&w=majority
+     ```
+
+6. **Paste into `.env` File**
+   ```env
+   MONGO_URI=mongodb+srv://your_user:your_pass@cluster.mongodb.net/?retryWrites=true&w=majority
+
 ## Note
 
 Make sure you fill in a valid MongoDB URI in the config.js file. If you have any issues or questions, feel free to contact the creator.
