@@ -8,7 +8,9 @@ Creator: [ArdSvt](https://github.com/ArdSvt)
 
 ## Table of Contents 
 
-[Run With Termux](#RunTermux)
+The following is a complete guide to using or deploying this bot..
+
+[Run With Termux](#RunTermux) - How to run in termux
 ## RunTermux
 
 1. Install Termux to Yor android system.
