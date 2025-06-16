@@ -15,7 +15,7 @@ module.exports = {
     }
 
     const reward = 250;
-    await mongo.db('rpg').collection('users').updateOne(
+    await global.database.collection('users').updateOne(
       { uid: m.sender },
       { $inc: { coin: reward }, $set: { lastDaily: now } },
       { upsert: true }
