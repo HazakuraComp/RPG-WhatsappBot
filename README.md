@@ -15,9 +15,13 @@ The following is a complete guide to using or deploying this bot..
 
 [Run with Heroku](#HerokuRun) - How to run in Heroku.
 [Run with Replit](#ReplitDeployment) - How to run in replit.
+
 [Run with Railway](#RailwayDeployment) - How to run in railway.
+
 [Run with Codespace](#GithubCodespace) - How to run in github codespace.
+
 [Run with VPS](#VPS) - How to run in Virtual Private Server.
+
 [Run with RDP](#RemoteDesktop) - How to run in Remote Desktop.
 
 ## 📦 WhatsApp Bot Dependencies
