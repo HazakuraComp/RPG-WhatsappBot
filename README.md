@@ -12,6 +12,7 @@ The following is a complete guide to using or deploying this bot..
 
 [Run With Termux](#RunTermux) - How to run in termux.
 [Get URI MongoDB](#UriGet) - How to Get uri Mongo database.
+[Run with Heroku](#HerokuRun) - How to run in Heroku.
 
 ## 📦 WhatsApp Bot Dependencies
 
