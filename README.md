@@ -14,7 +14,11 @@ The following is a complete guide to using or deploying this bot..
 [Get URI MongoDB](#UriGet) - How to Get uri Mongo database.
 
 [Run with Heroku](#HerokuRun) - How to run in Heroku.
-[Replit Deployment](#ReplitDeployment) - How to run in replit
+[Run with Replit](#ReplitDeployment) - How to run in replit.
+[Run with Railway](#RailwayDeployment) - How to run in railway.
+[Run with Codespace](#GithubCodespace) - How to run in github codespace.
+[Run with VPS](#VPS) - How to run in Virtual Private Server.
+[Run with RDP](#RemoteDesktop) - How to run in Remote Desktop.
 
 ## 📦 WhatsApp Bot Dependencies
 
