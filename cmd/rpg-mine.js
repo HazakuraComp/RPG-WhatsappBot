@@ -7,7 +7,7 @@ module.exports = {
     const gold = Math.floor(Math.random() * 3);
     const diamond = Math.floor(Math.random() * 2);
 
-    await mongo.db('rpg').collection('users').updateOne(
+    await global.database.collection('users').updateOne(
       { uid: m.sender },
       {
         $inc: { 'inventory.iron': iron, 'inventory.gold': gold, 'inventory.diamond': diamond },
