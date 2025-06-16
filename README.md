@@ -23,6 +23,7 @@ The following is a complete guide to using or deploying this bot..
 [Run with VPS](#VPS) - How to run in Virtual Private Server.
 
 [Run with RDP](#RemoteDesktop) - How to run in Remote Desktop.
+
 [Run with Google's IDX](#IDXDeploy) - How to run in IDX Googles.
 
 ## 📦 WhatsApp Bot Dependencies
