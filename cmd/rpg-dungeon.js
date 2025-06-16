@@ -1,40 +1,32 @@
 module.exports = {
-  command: ["duel"],
+  command: ["dungeon"],
   tags: ["RPG"],
   private: false,
-  func: async (m, { text, prefix }) => {
+  func: async (m) => {
     const uid = m.sender
     const now = Date.now()
+    const user = await global.database.collection('users').findOne({ uid })
 
-    if (!text) return m.reply(`Usage: ${prefix}duel @user`)
-    const opponent = m.mentionedJid[0]
-    if (!opponent) return m.reply("You must tag someone to duel with.")
-    if (opponent === uid) return m.reply("You can't duel yourself.")
+    if ((user?.energy || 0) < 10) return m.reply("You need 10 energy to enter the dungeon.")
 
-    const [user, opp] = await Promise.all([
-      global.database.collection('users').findOne({ uid }),
-      global.database.collection('users').findOne({ uid: opponent })
-    ])
+    const success = Math.random() < 0.7
+    const reward = Math.floor(Math.random() * 1500 + 1000)
 
-    const userPower = (user?.level || 1) * (user?.exp || 1)
-    const oppPower = (opp?.level || 1) * (opp?.exp || 1)
-    const winner = Math.random() * userPower > Math.random() * oppPower
-    const reward = Math.floor(Math.random() * 1000 + 500)
+    await global.database.collection('users').updateOne(
+      { uid },
+      {
+        $inc: {
+          coin: success ? reward : -500,
+          exp: success ? 100 : -50,
+          energy: -10
+        },
+        $set: { lastDungeon: now }
+      },
+      { upsert: true }
+    )
 
-    if (winner) {
-      await global.database.collection('users').updateOne(
-        { uid },
-        { $inc: { coin: reward, exp: 50 } },
-        { upsert: true }
-      )
-      return m.reply(`You won the duel and earned ${reward} coins + 50 EXP.`)
-    } else {
-      await global.database.collection('users').updateOne(
-        { uid },
-        { $inc: { coin: -reward, exp: -20 } },
-        { upsert: true }
-      )
-      return m.reply(`You lost the duel and lost ${reward} coins - 20 EXP.`)
-    }
+    m.reply(success
+      ? `You cleared the dungeon! +${reward} coins and 100 EXP.`
+      : `You failed the dungeon. Lost -500 coins and 50 EXP.`)
   }
 }
