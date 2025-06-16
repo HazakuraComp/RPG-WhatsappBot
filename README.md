@@ -23,6 +23,7 @@ The following is a complete guide to using or deploying this bot..
 [Run with VPS](#VPS) - How to run in Virtual Private Server.
 
 [Run with RDP](#RemoteDesktop) - How to run in Remote Desktop.
+[Run with Google's IDX](#IDXDeploy) - How to run in IDX Googles.
 
 ## 📦 WhatsApp Bot Dependencies
 
@@ -310,6 +311,122 @@ pm2 startup
 ---
 
 Let me know if you’d like a downloadable `.md` version of this guide or tailored `.env.example` template for your repository.
+
+---
+
+## IDXDeploy
+
+**Google IDX** is a browser-based development environment built on top of **VS Code + Google Cloud infrastructure**. You can use it to run and test your Node.js-based WhatsApp bot.
+
+---
+
+### Overview
+
+| Feature           | Status                                |
+| ----------------- | ------------------------------------- |
+| Persistence       | Temporary (development only)          |
+| Cost              | Free (currently in beta)              |
+| Ideal for         | Testing, development, debugging       |
+| Supported runtime | Node.js, Python, Java (via container) |
+
+---
+
+### Prerequisites
+
+* Google account
+* Access to [Google IDX](https://idx.dev/)
+* GitHub repository containing your WhatsApp bot
+* MongoDB Atlas URI (or other MongoDB connection string)
+
+---
+
+### Step-by-Step Deployment on Google IDX
+
+#### 1. Open IDX and Create a Workspace
+
+1. Visit [https://idx.dev/](https://idx.dev/)
+2. Click **"Get Started"** and sign in with your Google account
+3. Choose **"Create Workspace"**
+4. Select **"Import from GitHub"**
+5. Choose the repository that contains your WhatsApp bot source code
+6. Choose **Node.js** as your runtime
+
+---
+
+#### 2. Configure Environment
+
+Inside the terminal (available in bottom pane):
+
+```bash
+npm install
+```
+
+You may want to create a `.env` file in the root of your project:
+
+```env
+MONGO_URI=your_mongo_db_uri
+PORT=3000
+```
+
+Then install `dotenv` if your project uses it:
+
+```bash
+npm install dotenv
+```
+
+Make sure your `index.js` or `main.js` loads `.env`:
+
+```js
+require('dotenv').config()
+```
+
+---
+
+#### 3. Run the Bot
+
+From the terminal:
+
+```bash
+node index.js
+```
+
+You should see logs like:
+
+```
+Connected to WhatsApp as: 123456789@s.whatsapp.net
+Bot running on port 3000
+```
+
+---
+
+### Optional: Forward Port (If HTTP Server Used)
+
+If your bot includes a web server (Express, Koa, etc.), forward the port:
+
+1. In IDX, click the **"Ports"** tab
+2. Forward port `3000` or whichever your server is using
+3. Copy the provided public URL if you want to use it with UptimeRobot or webhook
+
+---
+
+### Notes
+
+| Feature                         | Support Status                   |
+| ------------------------------- | -------------------------------- |
+| Persistent background processes | Not supported (IDX is ephemeral) |
+| Webhook support                 | Yes, via port forwarding         |
+| Long-running bots               | Not suitable for production      |
+
+Google IDX is **not** recommended for full-time bot hosting. It's best used for:
+
+* Editing bot code
+* Testing features and commands
+* Debugging MongoDB queries
+* Running development experiments
+
+---
+
+Let me know if you'd like a `Dockerfile`, `.env.example`, or `.idx-workspace` configuration tailored to your WhatsApp bot project.
 
 ## Note
 
