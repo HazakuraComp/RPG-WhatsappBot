@@ -14,7 +14,7 @@ The following is a complete guide to using or deploying this bot..
 [Get URI MongoDB](#UriGet) - How to Get uri Mongo database.
 
 [Run with Heroku](#HerokuRun) - How to run in Heroku.
-[Replit Deployment](#1 Replit Deployment) - How to run in replit
+[Replit Deployment](#1ReplitDeployment) - How to run in replit
 
 ## 📦 WhatsApp Bot Dependencies
 
