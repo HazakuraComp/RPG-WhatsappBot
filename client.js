@@ -68,8 +68,7 @@ const userTemp = async (jid) => {
   }
 }
 const users = global.database.collection("users")
-let me
-me = await users.findOne({ jid: m.sender })
+let me = await users.findOne({ jid: m.sender })
 if (!me) {
 let dbtemp = userTemp(m.sender)
 await users.insertOne(dbtemp)
