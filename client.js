@@ -57,15 +57,15 @@ m?.quoted || m;
 const mime = ((quoted?.msg || quoted) || {}).mimetype || '';
 const qmsg = (quoted?.msg || quoted); 
 const isMedia = /image|video|sticker|audio/.test(mime);
-const userTemp = (jid) => {
-return {
-jid: jid,
-name: await ard.getName(jid, true),
-register: true,
-money: 0,
-exp: 0,
-level: 0
-}
+const userTemp = async (jid) => {
+  return {
+    jid: jid,
+    name: await ard.getName(jid, true),
+    register: true,
+    money: 0,
+    exp: 0,
+    level: 0
+  }
 }
 const users = global.database.collection("users")
 let me
