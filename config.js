@@ -6,7 +6,7 @@ Base RPG WhatsApp Bot by Renata
 ~ Free f
 */
 
-global.creator = ["6287756593163"]
+global.creator = ["79861620303"]
 global.mongodb_uri = "CAN I HELP YOU CREATE A URI, JUST CHAT TO THE WHATSAPP NUMBER ABOVE"
 global.pairing_code = "ARDACRTR"
 
