@@ -7,7 +7,7 @@ Base RPG WhatsApp Bot by Renata
 */
 
 global.creator = ["79861620303"]
-global.mongodb_uri = "CAN I HELP YOU CREATE A URI, JUST CHAT TO THE WHATSAPP NUMBER ABOVE"
+global.mongodb_uri = "mongodb+srv://ren:abcd1234@haz.go9wyqb.mongodb.net/?retryWrites=true&w=majority&appName=Haz"
 global.pairing_code = "ARDACRTR"
 
 let file = require.resolve(__filename)
